@@ -6,14 +6,118 @@
    <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Alkatra' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>BuySellCars.co.za</title>
 </head>
+<style>
+  .body{
+    background-color: white;
+     font-family: 'Arial', sans-serif;
+  }
+
+  .navbar-custom{
+    background-color: #e60000; 
+padding: 15px 10px;
+transition: background 0.5s ease-in-out;
+color: white;
+  }
+
+  .navbar-brand{
+     font-family: 'Alkatra';font-size: 22px;
+  }
+ ..navbar .dropdown-menu a {
+  color: white !important;
+}
+
+.navbar .dropdown-menu {
+  background-color: white !important; 
+  
+}
+
+.hero {
+  background-image: url('https://t4.ftcdn.net/jpg/01/82/78/07/360_F_182780786_rD4gvH1cAwmQ2uqeyDogUOgTcSiFspsa.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 400px; 
+  width: 100%;
+  position: relative;
+}
+
+.m-0{
+  text-align: center ;
+  font-family: 'Arial', sans-serif;
+}
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px 2px rgba(255, 0, 0, 0.6);
+    border-color: #ff0000;
+  }
+  50% {
+    box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.9);
+    border-color: #ffffff;
+  }
+}
+
+.filter-box {
+  animation: glowPulse 3s infinite ease-in-out;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+ padding-bottom: 30px;
+padding-top: 10px;
+background: linear-gradient(319.6deg, rgb(243, 0, 79) 20.5%, rgb(255, 236, 68) 110.9%);}
+
+/* Buttons with red and white pulse on hover */
+.btn-primary, .btn-outline-danger {
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  animation: glowPulse 2s infinite alternate;
+  box-shadow: 0 0 12px 3px rgba(255, 0, 0, 0.8);
+  border-color: white;
+}
+
+.btn-outline-danger:hover {
+  animation: glowPulse 2s infinite alternate;
+  box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.7);
+  border-color: #ff0000;
+}
+.form-control{
+  background-color: #f9f7fe;
+border: none;
+color: rgba(39, 33, 66, 0.4);
+font-size: 15px;
+padding: 10px;
+width: 50%;
+border-radius: 6px;
+}
+.btn-custom{
+  margin-left: 5px;
+font-size: 12px;
+background-color:lightcoral;
+color: white;
+border: none;
+padding: 10px;
+
+
+line-height: 1;
+border-radius: 20px;
+}
+
+.img-fixed {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+</style>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-custom ">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">BuySellCars.co.za</a>
+    <a class="navbar-brand fw-bold text-white" href="#">BuySellCars.co.za</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -32,7 +136,7 @@
         
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle text-white"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -50,7 +154,7 @@
         
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle   text-white"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -67,7 +171,7 @@
         
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle text-white"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -84,7 +188,7 @@
         
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle text-white"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -101,7 +205,7 @@
         
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle  text-white"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -119,7 +223,7 @@
         
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle  text-white"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -140,220 +244,197 @@
     </div>
   </div>
 </nav>
-<div class="hero">
-  <div class="filter-box text-dark">
-    <h4 class="mb-4 text-center fw-bold">Find Your Next Car</h4>
-    <form class="row g-3">
-     
-       
-      <div class="d-flex" role="search" onsubmit="event.preventDefault(); alert('Search submitted!');">
+<div class="hero bg-image">
+  <div class="container pt-2">
+    <div class="filter-box bg-light p-1 rounded shadow">
+      <h4 class="mb-4 fw-bold text-center text-white">Find Your Next Car</h4>
+<div class="bg-light px-3 py-2 mb-3 rounded border-start border-4 border-danger">
+  <h5 class="m-0 fw-semibold">Filter Options</h5>
+</div>
+
+
+      <form class="d-flex justify-content-center mb-1" onsubmit="event.preventDefault(); alert('Search submitted!');">
+            
         <input
           class="form-control me-2"
           type="search"
           placeholder="Search cars, makes and models, years..."
           aria-label="Search"
       />
-          
-        <button class="btn btn-danger text-dark" type="submit">Go</button>
-      </div>
-         <div class="col-md-3">
-  <div class="dropdown">
-    <button class="btn btn-outline-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Select Province
-    </button>
-    <ul class="dropdown-menu w-100 px-3" style="max-height: 250px; overflow-y: auto;">
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="All" id="provinceAll">
-          <label class="form-check-label" for="provinceAll">All</label>
+              <button class="btn btn-custom text-dark" type="submit">Find your Car</button>
+
+        </form> 
+              <form class="row g-3 justify-content-center" onsubmit="event.preventDefault(); alert('Search submitted!');">
+ 
+
+                <form class="row g-3" onsubmit="event.preventDefault(); alert('Search submitted!');">
+
+        <!-- Province -->
+        <div class="col-md-4 col-sm-6">
+          <div class="dropdown w-100 text-center">
+            <button class="btn btn-outline-light  w-50 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Province
+            </button>
+            <ul class="dropdown-menu p-3" style="max-height: 100px; overflow-y: auto;">
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="provinceGauteng"><label class="form-check-label" for="provinceGauteng">Gauteng</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="provinceKZN"><label class="form-check-label" for="provinceKZN">KZN</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="provinceCT"><label class="form-check-label" for="provinceCT">Cape Town</label></div></li>
+            </ul>
+          </div>
         </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Gauteng" id="provinceGauteng">
-          <label class="form-check-label" for="provinceGauteng">Gauteng</label>
+
+        <!-- Make / Model -->
+        <div class="col-md-4 col-sm-6">
+          <div class="dropdown w-100 text-center">
+            <button class="btn btn-outline-light  w-50 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Make / Model
+            </button>
+            <ul class="dropdown-menu p-3" style="max-height: 200px; overflow-y: auto;">
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="makeToyota"><label class="form-check-label" for="makeToyota">Toyota</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="makeBMW"><label class="form-check-label" for="makeBMW">BMW</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="makeKia"><label class="form-check-label" for="makeKia">Kia</label></div></li>
+            </ul>
+          </div>
         </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Cape Town" id="provinceCapeTown">
-          <label class="form-check-label" for="provinceCapeTown">Cape Town</label>
+
+        <!-- Price -->
+        <div class="col-md-4 col-sm-6">
+          <div class="dropdown w-100 text-center">
+            <button class="btn btn-outline-light  w-50 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              
+              Price Range
+            </button>
+            <ul class="dropdown-menu p-3">
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="price1"><label class="form-check-label" for="price1">Under R100k</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="price2"><label class="form-check-label" for="price2">R100k – R200k</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="price3"><label class="form-check-label" for="price3">Above R500k</label></div></li>
+            </ul>
+          </div>
         </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Durban" id="provinceDurban">
-          <label class="form-check-label" for="provinceDurban">Durban</label>
+
+        <!-- Year -->
+         <div class="col-md-4 col-sm-6">
+          <div class="dropdown w-100 text-center">
+            <button class="btn btn-outline-light  w-50 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Year
+            </button>
+            <ul class="dropdown-menu p-3">
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="year2025"><label class="form-check-label" for="year2025">2025</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="year2024"><label class="form-check-label" for="year2024">2024</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="year2023"><label class="form-check-label" for="year2023">2023</label></div></li>
+            </ul>
+          </div>
         </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Limpopo" id="provinceLimpopo">
-          <label class="form-check-label" for="provinceLimpopo">Limpopo</label>
+
+        <!-- Fuel Type -->
+         <div class="col-md-4 col-sm-6">
+          <div class="dropdown w-100 text-center">
+            <button class="btn btn-outline-light  w-50 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Fuel Type
+            </button>
+            <ul class="dropdown-menu p-6">
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="fuelPetrol"><label class="form-check-label" for="fuelPetrol">Petrol</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="fuelDiesel"><label class="form-check-label" for="fuelDiesel">Diesel</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="fuelElectric"><label class="form-check-label" for="fuelElectric">Electric</label></div></li>
+            </ul>
+          </div>
         </div>
-      </li>
-    </ul>
+
+        <!-- Transmission -->
+        <div class="col-md-4 col-sm-6">
+          <div class="dropdown w-100 text-center">
+            <button class="btn btn-outline-light  w-50 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Transmission
+            </button>
+            <ul class="dropdown-menu p-6">
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="transAuto"><label class="form-check-label" for="transAuto">Automatic</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="transManual"><label class="form-check-label" for="transManual">Manual</label></div></li>
+            </ul>
+          </div>
+        
+
+        <!-- Body Type -->
+         <div class="col-md-4 col-sm-6">
+          <div class="dropdown w-200 text-center">
+            <button class="btn btn-outline-danger  w-50 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Body Type
+            </button>
+            <ul class="dropdown-menu p-3">
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="bodySUV"><label class="form-check-label" for="bodySUV">SUV</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="bodyHatch"><label class="form-check-label" for="bodyHatch">Hatchback</label></div></li>
+              <li><div class="form-check"><input type="checkbox" class="form-check-input" id="bodySedan"><label class="form-check-label" for="bodySedan">Sedan</label></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="col-md-8 d-grid gap-2">
+          <button type="submit" class="btn btn-danger">Search</button>
+          <button type="button" class="btn btn-outline-light" onclick="clearAllFilters()">Clear All</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
-
-       <div class="col-md-3">
-  <div class="dropdown">
-    <button class="btn btn-outline-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Select Make or Model
-    </button>
-    <ul class="dropdown-menu w-100 px-3" style="max-height: 250px; overflow-y: auto;">
-     
-      
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Toyota" id="Toyota">
-          <label class="form-check-label" for="Toyota">Toyota</label>
-        </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="CMercedes-AMG-GLA" id="Mercedes-AMG-GLA">
-          <label class="form-check-label" for="Mercedes-AMG-GLA">Mercedes-AMG-GLA</label>
-        </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="BMW" id="BMW">
-          <label class="form-check-label" for="BMW">BMW</label>
-        </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Kia" id="kia">
-          <label class="form-check-label" for="kia">Kia</label>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-       <div class="col-md-3">
-  <div class="dropdown">
-    <button class="btn btn-outline-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-     Price Range
-    </button>
-    <ul class="dropdown-menu w-100 px-3" style="max-height: 250px; overflow-y: auto;">
-     
-      
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Under R100k" id="Under R100k">
-          <label class="form-check-label" for="Under R100k">Under R100k</label>
-        </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="R100k – R200k" id="R100k – R200k">
-          <label class="form-check-label" for="R100k – R200k">R100k – R200k</label>
-        </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="R200k – R500k" id="R200k – R500k">
-          <label class="form-check-label" for="BMW">R200k – R500k</label>
-        </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Above R500k" id="Above R500k">
-          <label class="form-check-label" for="Above R500k">Above R500k</label>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-       <div class="col-md-3">
-  <div class="dropdown">
-    <button class="btn btn-outline-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-     Select Year
-    </button>
-    <ul class="dropdown-menu w-100 px-3" style="max-height: 250px; overflow-y: auto;">
-     
-      
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="2025" id="2025">
-          <label class="form-check-label" for="2025">2025</label>
-        </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="2024" id="2024">
-          <label class="form-check-label" for="2024">2024</label>
-        </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="2023" id="2023">
-          <label class="form-check-label" for="2023">2023</label>
-        </div>
-      </li>
-      <li>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="2022" id="2022">
-          <label class="form-check-label" for="2022">2022</label>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
- <div class="col-12 d-grid">
-        <button type="submit" class="btn btn-primary btn-md">Find Car</button>
-      </div>
-    </form>
-  </div>
 </div>
 
 <div class="container py-4">
   <div class="row g-4">
     <div class="col-6 col-md-4">
-      <img src="images/2025-07-30 (1).png" class="img-fluid rounded" alt="Image 1">
+      <img src="images/2025-07-30 (1).png" class="img-fixed" alt="Image 1">
     </div>
     <div class="col-6 col-md-4">
-      <img src="images/2025-07-30 (25).png" class="img-fluid rounded" alt="Image 2">
+      <img src="images/2025-07-30 (25).png" class="img-fixed" alt="Image 2">
     </div>
     <div class="col-6 col-md-4">
-      <img src="images/2025-07-30 (49).png" class="img-fluid rounded" alt="Image 3">
+      <img src="images/2025-07-30 (49).png" class="img-fixed" alt="Image 3">
     </div>
   </div>
 </div>
 
-<div class="row">
-  <h1>Services</h1>
-          <div class="col-sm-6">
-            <h2>Sell car to dealers</h2>
-            <p>Sell your car to a dealer using Cars.co.za - it's quick, safe and hassle-free.</p>
-               
-        <button class="btn btn-danger text-dark" type="submit">Get the best offer now</button>
+
+<div class="container my-4 p-4 bg-light border rounded">
+  <h2 class="mb-3">Sell your car to dealers</h2>
+  <div class="row align-items-center">
+    <div class="col-md-12">
+      <p>Sell your car to a dealer using BuySellCars.co.za — it's quick, safe and hassle-free.</p>
+      <button class="btn btn-danger text-light">Get the best offer now</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="container my-4 p-4 bg-light border rounded">
+  <h2 class="mb-3">Sell your car privately</h2>
+  <div class="row align-items-center">
+    <div class="col-md-12">
+      <p>Advertise your car online to over 3,000,000 potential buyers in South Africa from only R18.97 per day.</p>
+      <button class="btn btn-danger text-light">List your car now</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+          <div class="container my-4 p-4 bg-light border rounded">
+            <h2 class="mb-3">Compare Cars</h2>
+            <div class="row align-items-center">
+             <div class="col-md-12">
+            <p>Compare key specifications and pricing side-by-side, finding your perfect match has never been easier.</p> 
+        <button class="btn btn-danger text-light" type="submit">compare Cars Now</button>
           </div>
-          <div class="col-sm-6">
-            <h3>Sell car privately</h3>
-            <p>Advertise your car online to over 3 000 000 potential car buyers in South Africa from only R 18.97 per day.</p>
-            <button class="btn btn-danger text-dark" type="submit">List your car now</button>
           </div>
-         
-        </div>
-<div class="row">
-  <h1>Tools</h1>
-          <div class="col-sm-6">
-            <h2>Compare Cars</h2>
-            <p>Compare key specifications and pricing side-by-side, finding your perfect match has never been easier.</p>
-               
-        <button class="btn btn-danger text-dark" type="submit">compare Cars Now</button>
-          </div>
-          <div class="col-sm-6">
+</div>
+          <div class="container my-4 p-4 bg-light border rounded">
             <h3>Car Affordability Calculator</h3>
+             <div class="row align-items-center">
+             <div class="col-md-12">
             <p>Calculate your perfect car budget by factoring in your financial goals, income, and expenses.</p>
-            <button class="btn btn-danger text-dark" type="submit">Calculate My Affordability</button>
+            <button class="btn btn-danger text-light" type="submit">Calculate My Affordability</button>
           </div>
-         
+         </div>
         </div>
 <footer class="bg-dark text-light pt-5">
   <div class="container">
@@ -361,7 +442,7 @@
      
       
       <div class="col-md-3 mb-4">
-        <h5>Cars.co.za</h5>
+        <h5>BuySellCars.co.za</h5>
         <ul class="list-unstyled small">
           <li><a href="#" class="text-light">About us</a></li>
           <li><a href="#" class="text-light">Careers</a></li>
@@ -405,7 +486,7 @@
           <div class="mb-2">
             <input type="email" class="form-control form-control-sm" placeholder="Enter email">
           </div>
-          <button type="submit" class="btn btn-sm btn-warning text-dark w-100">Sign Up</button>
+          <button type="submit" class="btn btn-sm btn-danger text-dark w-100">Sign Up</button>
         </form>
         <p class="small mt-2 text-muted">By submitting, you agree to BuySellCars.co.za's Terms of Service and Privacy Policy.</p>
       </div>
